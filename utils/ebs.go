@@ -20,7 +20,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-// This "awsjack" fetch details realted to Instances & IAM
 package awsjack
 
 import (
@@ -37,7 +36,7 @@ type diskInfoType struct {
 	diskCount int
 }
 
-// This function used for fetching EBS volume details
+// This function used for retrieving EBS Disk related details attached to a given EC2 instance
 func diskInfo(y *ec2.Instance) diskInfoType {
 
 	deviceMap := map[string]int64{}

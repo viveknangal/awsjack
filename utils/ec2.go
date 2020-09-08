@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-// This "awsjack" fetch details realted to Instances & IAM
+// This "awsjack" package contains functions  which fetches EC2 Instances & IAM user details
 package awsjack
 
 import (
@@ -62,7 +62,8 @@ type instanceInfoOutput struct {
 	Regionlist         []string
 }
 
-// This function call "instanceInfo" which retrieves instance details
+// This function responsible for retrieving EC2 Instance details based on "region" variable which is passed
+//via command line argument
 func Ec2Details(region string) instanceInfoOutput {
 
 	sess, _ := session.NewSession(&aws.Config{

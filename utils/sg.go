@@ -20,7 +20,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-// This "awsjack" fetch details realted to Instances & IAM
 package awsjack
 
 import (
@@ -31,7 +30,7 @@ import (
 	"github.com/aws/aws-sdk-go/service/ec2"
 )
 
-// Fetch "Security Groups" details related to EC2 instance
+// This function retrieves "Security Groups"  related details for EC2 instances
 func sgInfo(ecsvc *ec2.EC2, y *ec2.Instance) []string {
 	sgPortList := []string{}
 

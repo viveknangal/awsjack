@@ -75,7 +75,7 @@ func viewHandler(resp http.ResponseWriter, req *http.Request) {
 // "populateTemplates" is Parsing all HTML templates
 func populateTemplates() *template.Template {
 	result := template.New("templates")
-	fmt.Println("template=", result.Tree)
+	//fmt.Println("template=", result.Tree)
 	const basePath = "templates"
 	template.Must(result.ParseGlob(basePath + "/*.html"))
 	return result
@@ -84,7 +84,7 @@ func populateTemplates() *template.Template {
 // This is main function which go willinvoke for starting this app
 
 func main() {
-	fmt.Println("starting=")
+	fmt.Println("AWSJack App Starting....")
 	reginArg := os.Args[1]
 
 	RegionList = strings.Split(reginArg, ",")

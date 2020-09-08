@@ -1,0 +1,196 @@
+<!-- Copyright (c) 2020 Vivek Aggarwal
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. -->
+
+<html>
+  {{ template "_header.html" }}
+
+<body>
+
+  {{ template "_navigationBar.html" }}
+ <!-- Tab links -->
+ <div class="tab">
+    <button class="tablinks" onclick="openResource(event, 'Instances')">Instances</button>
+    <button class="tablinks" onclick="openResource(event, 'Iam')">IAM</button>
+  </div> 
+
+ <form method="POST">
+  <input type="hidden" id="hid1" name="region"/>
+
+
+  <div id="Instances" class="tabcontent">
+        <div class="tab">
+          {{ range .Regionlist }}
+        
+              <button class="tablinks" value={{ . }} onclick="fetchDetails(this)">{{ . }}</button>
+              {{ end }}
+          
+        </div>
+  </div>
+
+  <div id="Iam" class="tabcontent">
+        <div class="tab">
+        <button class="tablinks" value="Users" onclick="fetchIamDetails(this)" >Users</button>
+</div>
+  </div>
+
+  <p> {{ .Mesg }}</p>
+  <table border="2" id="awslist">
+    <tr >
+        <th>
+          SNo  
+        
+        </th>
+        <th>
+            InstanceID  
+          
+          </th>
+          <th>
+            Name  
+          
+          </th>
+       
+        <th>
+          Price/day 
+        
+        </th>
+       
+        <th>
+          LaunchDate  
+        
+        </th>
+        <th>
+          Disks Attached 
+        
+        </th>
+        <th>
+          Open Ports
+          (0.0.0.0/0) 
+        
+        </th>
+        <th>
+          State  
+        
+        </th>
+        <th>
+          PrivateIP  
+        
+        </th>
+        <th>
+          PublicIP  
+        
+        </th>
+        <th>
+          InstanceType  
+        
+        </th>
+        <th>
+          AvailZone  
+        
+        </th>
+       
+        
+        <th>
+          PrivateKey  
+        
+        </th>
+        <th>
+          ImageID  
+        
+        </th>
+        
+       
+    </tr> 
+    {{ range .InstanceDetailList}}
+    <tr >
+        <td>
+        {{  .Count }} 
+        
+        </td>
+        <td>
+            {{  .InstanceID }} 
+            
+            </td>
+            <td>
+                {{  .Name }} 
+                
+                </td>
+       
+        <td>
+        {{  .Price }} 
+        
+        </td>
+       
+        <td>
+        {{  .LaunchDate }} 
+        
+        </td>
+        <td>
+        {{  .DiskCount }} 
+        
+        </td>
+        <td>
+        {{  .Sgroup }} 
+        
+        </td>
+        <td>
+          {{  .State }} 
+          
+          </td>
+        <td>
+        {{  .PrivateIP }} 
+        
+        </td>
+        <td>
+          {{  .PublicIP }} 
+          
+          </td>
+        <td>
+        {{  .InstanceType }} 
+        
+        </td>
+        <td>
+        {{  .Az }} 
+        
+        </td>
+       
+        
+        <td>
+        {{  .Key }} 
+        
+        </td>
+        <td>
+        {{  .ImageID }} 
+        
+        </td>
+        
+       
+    </tr>
+    {{ end }}
+    
+</table>
+
+
+{{ template "_scripts.html" }}
+
+
+</body>
+
+</html>
+

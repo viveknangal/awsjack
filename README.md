@@ -21,7 +21,7 @@ And that where this tool comes handy :blush:
 ![picture](static/images/aws-jack.gif)
 
 ## Pre-requisite to run
-1. First & foremost, this requires valid **AWS IAM credentials** in case you're running this application from a machine outside VPC (i.e laptop) else if running from an AWS EC2 node them **IAM role** will also work. Follow this [link](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config) for configure IAM credentials if missing.
+1. First & foremost, this requires valid **AWS IAM credentials** in case you're running this application from a machine outside VPC (eg: laptop) and if running from an AWS EC2 node then **IAM role** will also work. Follow this [link](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config) for configure IAM credentials if missing.
  1. **IAM Permissions** : This application requires only `read-only access`, specific permissions required in `IAM policy` are provided below:- 
 ```
 {
@@ -48,7 +48,7 @@ And that where this tool comes handy :blush:
 }
 ```
 
-1. Docker need to be installed.If missing,follow this [link](https://docs.docker.com/get-docker/) for installation Docker.
+3. Docker need to be installed.If missing,follow this [link](https://docs.docker.com/get-docker/) for installation Docker.
  
 ## How to run
 

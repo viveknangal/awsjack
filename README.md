@@ -5,17 +5,17 @@
 ## How does it work
 ![picture](static/images/aws-jack.gif)
 
-- Run `awsjack` using Docker as below:-
+ Run `awsjack` using Docker as below:-
 
-- Run `docker build` command
+1 Run `docker build` command
 ```
 docker build -t awsjack:latest .
 ```
-- Run `docker run` command
+2 Run `docker run` command
 ```
 docker run -v $(echo ~/.aws):/root/.aws -p 8080:8080 awsjack:latest
 ```
-- Access application via below endpoint 
+3 Access application via below endpoint 
 ```
      http://localhost:8080/
 ```

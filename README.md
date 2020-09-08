@@ -17,7 +17,7 @@ And that where this tool comes handy :blush:
 ## "AWSJack" API Docs
 [pkg.go.dev](https://pkg.go.dev/github.com/viveknangal/awsjack@v0.2.0/utils?tab=doc)
 
-## How does it work
+## Demo
 ![picture](static/images/aws-jack.gif)
 
 ## Pre-requisite to run
@@ -73,5 +73,6 @@ docker run -v ~/.aws:/root/.aws -p 8080:8080 awsjack:latest "us-east-1,us-east-2
 3. Once the above docker instance is up & running, access the application in the browser using below endpoint 
 ```
      http://localhost:8080/
+```     
 ## License
 Licensed under the [MIT License](LICENSE)

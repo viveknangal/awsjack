@@ -3,12 +3,21 @@
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/viveknangal/awsjack?style=plastic)
 ![picture](static/images/awsjack.png)
 ## How does it work
+![picture](static/images/aws-jack.gif)
 
-## Run Docker as below 
+## Run `awsjack` using Docker as below:-
 
+- Run `docker build` command
 ```
-docker run -d -v $(echo ~/.aws):/root/.aws -p 8080:8080 awsjack:10
+docker build -t awsjack:latest .
+```
+- Run `docker run` command
+   ```
+docker run -v $(echo ~/.aws):/root/.aws -p 8080:8080 awsjack:latest
+```
+- Access application via below endpoint 
+```
+     http://localhost:8080/
 ```
 ## License
-
 Licensed under the [MIT License](LICENSE)

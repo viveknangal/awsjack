@@ -18,4 +18,7 @@ EXPOSE 8080
 
 
 # Run the binary program produced by `go install`
-CMD ["./main"]
+ENTRYPOINT  ["./main"]
+
+CMD  ["eu-west-1"]
+

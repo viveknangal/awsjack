@@ -64,7 +64,7 @@ docker build -t awsjack:latest .
 ```
 docker run -v ~/.aws:/root/.aws -p 8080:8080 awsjack:latest "us-east-1,us-east-2"
 ```
-- -v  =  This is required for mount the **.aws** directory which holds the AWS IAM credentials. This is not required if running from a machine in AWS which has IAM role attached
+- -v  =  Its required for mounting the **.aws** directory which holds the AWS IAM credentials. Its not needed if this tool is being run from a machine in AWS having an IAM role attached to it
 - -p  = Exposing the port 8080 on the local machine,on this port we'll access the UI screen
 - awsjack:latest  = This is the Docker image we created above
 

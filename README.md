@@ -78,4 +78,4 @@ docker run -v ~/.aws:/root/.aws -p 8080:8080 awsjack:latest "us-east-1,us-east-2
 Licensed under the [MIT License](LICENSE)
 
 ## Credits
-This tool is being developed under **[GigSky]**(https://www.gigsky.com) company.
+This tool is being developed under `[GigSky](https://www.gigsky.com)` company.
